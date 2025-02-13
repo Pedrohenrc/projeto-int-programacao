@@ -107,6 +107,13 @@
         "descricao": "Cerveja pilsen.",
         "preco": 8.90,
         "imagem": "../static/imagens/latinha.jpg"
+      },
+      {
+        "id": 6,
+        "nome": "Bosta",
+        "descricao": "Bosta",
+        "preco": 8.90,
+        "imagem": "../static/imagens/latinha.jpg"
       }
     ]
   }

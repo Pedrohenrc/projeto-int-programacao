@@ -40,10 +40,15 @@
                         <div class="row">
                             {% for pizza in row %}
                                 <div class="pizzaaas">
+                                    <div id="preco">
+                                        <strong>
+                                            <p class="preco">R$ {{ "%.2f"|format(pizza.preco) }}</p>
+                                        </strong>   
+                                    </div>
                                     <div class="box-adjust">
                                         <h2>{{ pizza.nome }}</h2>
                                         <p class="descricao">{{ pizza.descricao }}</p>
-                                        <p class="preco">R$ {{ "%.2f"|format(pizza.preco) }}</p>
+                                        
                                     </div>
                                     <img src="{{ url_for('static', filename=pizza.imagem) }}" alt="{{ pizza.nome }}">
                                 </div>
@@ -55,16 +60,17 @@
             
             <h1>Bebidas</h1>
 
-            <section id="bebidas">
-                <div class="containerbebida">
+            <section id="pizzas">
+                <div class="containerpizza">
                     {% for row in cardapio.bebidas|batch(3) %}
                         <div class="row">
                             {% for bebida in row %}
-                                <div class="bebidaaas">
+                                <div class="pizzaaas">
+                                    <p class="preco">R$ {{ "%.2f"|format(bebida.preco) }}</p>
                                     <div class="box-adjust">
                                         <h2>{{ bebida.nome }}</h2>
                                         <p class="descricao">{{ bebida.descricao }}</p>
-                                        <p class="preco">R$ {{ "%.2f"|format(bebida.preco) }}</p>
+                                        
                                     </div>
                                     <img src="{{ url_for('static', filename=bebida.imagem) }}" alt="{{ bebida.nome }}">
                                 </div>

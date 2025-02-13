@@ -62,8 +62,17 @@ ul {
 .containerpizza {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-    gap: 20px; /* Espaçamento entre as pizzas */
+    justify-content: center;
 }
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre as pizzas (colunas) */
+}
+
+
 
 .pizzaaas {
     text-align: center;
@@ -72,12 +81,14 @@ ul {
     flex-direction: row-reverse;
     width: 50%;
     margin: auto;
+
 }
 
 .pizzaaas img {
     width: 100%; /* A largura da imagem vai ocupar 100% da largura do contêiner da pizza */
-    max-width: 200px; /* Limite para o tamanho da pizza */
+    max-width: 180px; /* Limite para o tamanho da pizza */
     height: auto; /* Mantém a proporção da imagem */
+    border-radius: 15px;
 }
 
 /* Ajuste no layout das caixas de navegação das pizzas e bebidas */
@@ -96,36 +107,11 @@ ul {
     justify-content: center;
 }
 
-.containerbebida {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-    gap: 20px; /* Espaçamento entre as pizzas */
-}
 
-.bebidaaas {
-    text-align: center;
-    margin-bottom: 20px; /* Espaçamento entre as linhas de pizzas */
+
+#preco{
     display: flex;
-    flex-direction: row-reverse;
-    width: 50%;
-    margin: auto;
+    align-items: center;
 }
 
-
-.bebidaaas img {
-    width: 100%; /* A largura da imagem vai ocupar 100% da largura do contêiner da pizza */
-    max-width: 200px; /* Limite para o tamanho da pizza */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-/* Ajuste no layout das caixas de navegação das pizzas e bebidas */
-
-
-.bebidas {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
-}
-
+    
