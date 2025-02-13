@@ -4,110 +4,70 @@
         "id": 1,
         "nome": "Margherita",
         "descricao": "Molho de tomate, mussarela, manjericão fresco.",
-        "tamanhos": [
-          { "tamanho": "Pequena", "preco": 20.90 },
-          { "tamanho": "Média", "preco": 25.90 },
-          { "tamanho": "Grande", "preco": 30.90 }
-        ],
+        "preco": 35.90,
         "imagem": "url_da_imagem_margherita"
       },
       {
         "id": 2,
         "nome": "Pepperoni",
         "descricao": "Molho de tomate, mussarela, pepperoni.",
-        "tamanhos": [
-          { "tamanho": "Pequena", "preco": 25.90 },
-          { "tamanho": "Média", "preco": 30.90 },
-          { "tamanho": "Grande", "preco": 35.90 }
-        ],
+        "preco": 35.90,
         "imagem": "url_da_imagem_pepperoni"
       },
       {
         "id": 3,
         "nome": "Quatro Queijos",
         "descricao": "Molho de tomate, mussarela, provolone, parmesão, gorgonzola.",
-        "tamanhos": [
-          { "tamanho": "Pequena", "preco": 27.90 },
-          { "tamanho": "Média", "preco": 32.90 },
-          { "tamanho": "Grande", "preco": 37.90 }
-        ],
+        "preco": 35.90,
         "imagem": "url_da_imagem_quatro_queijos"
       },
       {
         "id": 4,
         "nome": "Calabresa",
         "descricao": "Molho de tomate, mussarela, calabresa, cebola.",
-        "tamanhos": [
-          { "tamanho": "Pequena", "preco": 23.90 },
-          { "tamanho": "Média", "preco": 28.90 },
-          { "tamanho": "Grande", "preco": 33.90 }
-        ],
+        "preco": 35.90,
         "imagem": "url_da_imagem_calabresa"
       },
       {
         "id": 5,
         "nome": "Frango com Catupiry",
         "descricao": "Molho de tomate, mussarela, frango desfiado, catupiry.",
-        "tamanhos": [
-          { "tamanho": "Pequena", "preco": 26.90 },
-          { "tamanho": "Média", "preco": 31.90 },
-          { "tamanho": "Grande", "preco": 36.90 }
-        ],
+        "preco": 35.90,
         "imagem": "url_da_imagem_frango_catupiry"
       },
       {
         "id": 6,
         "nome": "Portuguesa",
         "descricao": "Molho de tomate, mussarela, presunto, ovo, cebola, azeitona, pimentão.",
-        "tamanhos": [
-          { "tamanho": "Pequena", "preco": 24.90 },
-          { "tamanho": "Média", "preco": 29.90 },
-          { "tamanho": "Grande", "preco": 34.90 }
-        ],
+        "preco": 35.90,
         "imagem": "url_da_imagem_portuguesa"
       },
       {
         "id": 7,
         "nome": "Vegetariana",
         "descricao": "Molho de tomate, mussarela, tomate, pimentão, cebola, champignon, azeitona.",
-        "tamanhos": [
-          { "tamanho": "Pequena", "preco": 22.90 },
-          { "tamanho": "Média", "preco": 27.90 },
-          { "tamanho": "Grande", "preco": 32.90 }
-        ],
+        "preco": 35.90,
         "imagem": "url_da_imagem_vegetariana"
       },
       {
         "id": 8,
         "nome": "Bacon",
         "descricao": "Molho de tomate, mussarela, bacon, cebola.",
-        "tamanhos": [
-          { "tamanho": "Pequena", "preco": 25.90 },
-          { "tamanho": "Média", "preco": 30.90 },
-          { "tamanho": "Grande", "preco": 35.90 }
-        ],
+        "preco": 35.90,
         "imagem": "url_da_imagem_bacon"
       },
       {
         "id": 9,
         "nome": "Napolitana",
         "descricao": "Molho de tomate, mussarela, tomate, parmesão, manjericão.",
-        "tamanhos": [
-          { "tamanho": "Pequena", "preco": 21.90 },
-          { "tamanho": "Média", "preco": 26.90 },
-          { "tamanho": "Grande", "preco": 31.90 }
-        ],
+        "preco": 35.90,
         "imagem": "url_da_imagem_napolitana"
       },
       {
         "id": 10,
         "nome": "Mexicana",
         "descricao": "Molho de tomate, mussarela, calabresa, pimentão, pimenta jalapeño.",
-        "tamanhos": [
-          { "tamanho": "Pequena", "preco": 28.90 },
-          { "tamanho": "Média", "preco": 33.90 },
-          { "tamanho": "Grande", "preco": 38.90 }
-        ],
+        "preco": 35.90,
         "imagem": "url_da_imagem_mexicana"
       }
     ],

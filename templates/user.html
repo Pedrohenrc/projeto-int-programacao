@@ -14,25 +14,39 @@
     <main>
         <!--Seção Imagem-->
         <div class="imagem">
+            <img src="../static/imagens/receta-de-pizza-sin-horno.jpg" alt="">
 
         </div>
 
         <!--navegador pizzas e bebidas-->
         <nav>
             <ul>
-                <li>pizzas</li>
-                <li>bebidas</li>
+                <div class="box">
+                    <a href="#pizzas">pizzas</a>
+                </div>
+                <div class="box">
+                    <a href="#bebidas">bebidas</a>
+                </div>
             </ul>
         </nav>
 
         <!--Seção cardápio-->
         <div id="cardapio">
-            <section class="pizzas">
-
+            
+            <section id="pizzas">
+                <h1>Pizzas</h1>
+                {% for pizza in cardapio.pizzas %}
+                    <h2>{{ pizza.nome }}</h2>
+                    <p class="preco">{{ pizza.preco }}</p>
+                {% endfor %}
             </section>
 
             <section id="bebidas">
-
+                <h1>Bebidas</h1>
+                {% for bebida in cardapio.bebidas %}
+                    <h2>{{ bebida.nome }}</h2   >
+                    <p class="preco">{{ bebida.preco }}</p>
+                {% endfor %}
             </section>
             
         </div>
