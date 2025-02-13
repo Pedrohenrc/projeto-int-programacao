@@ -10,7 +10,6 @@ def carregar_dados(caminho):
             return json.load(file)
     return []
 
-# Função para salvar dados em um arquivo JSON
 def salvar_dados(caminho, dados):
     with open(caminho, "w", encoding="utf-8") as file:
         json.dump(dados, file, indent=4)
@@ -34,6 +33,19 @@ def enviar_pedido():
 def cozinha():
     pedidos = carregar_dados('data/pedidos.json')
     return render_template('cozinha.html', pedidos = pedidos)
+
+@app.route('/atualizar_pedido/<int:pedido_id>', methods=["POST"])
+def enviarpedido (id_pedido):
+    pedidos = carregar_dados('data/pedidos.json')
+    acao = request.json.get('acao')
+
+    if acao == 'confirmar':
+        pedidos[id_pedido]['status'] = 'confirmado'
+    elif acao == 'recusado':
+        pedidos[id_pedido]['status'] = 'recusado'
+
+    salvar_dados('data/pedidos.json', pedidos)
+    return jsonify ({'Status: resposta recebida com sucesso!'})
 
 if __name__ == "__main__":
     app.run(debug=True)
