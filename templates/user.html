@@ -34,9 +34,10 @@
         <div id="cardapio">
             
             <section id="pizzas">
-                <h1>Pizzas</h1>
+                <h1>Conheça nosso cardápio</h1>
                 {% for pizza in cardapio.pizzas %}
                     <h2>{{ pizza.nome }}</h2>
+                    <p class="description">{{ pizza.descricao }}</p>
                     <p class="preco">{{ "%.2f"|format(pizza.preco) }}</p>
                     <img src="{{ pizza.imagem }}" alt="Imagem de {{ pizza.nome }}">
                 {% endfor %}
