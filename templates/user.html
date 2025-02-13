@@ -37,7 +37,8 @@
                 <h1>Pizzas</h1>
                 {% for pizza in cardapio.pizzas %}
                     <h2>{{ pizza.nome }}</h2>
-                    <p class="preco">{{ pizza.preco }}</p>
+                    <p class="preco">{{ "%.2f"|format(pizza.preco) }}</p>
+                    <img src="{{ pizza.imagem }}" alt="Imagem de {{ pizza.nome }}">
                 {% endfor %}
             </section>
 
@@ -45,7 +46,8 @@
                 <h1>Bebidas</h1>
                 {% for bebida in cardapio.bebidas %}
                     <h2>{{ bebida.nome }}</h2   >
-                    <p class="preco">{{ bebida.preco }}</p>
+                    <p class="preco">{{ "%.2f"|format(bebida.preco) }}</p>
+                    
                 {% endfor %}
             </section>
             

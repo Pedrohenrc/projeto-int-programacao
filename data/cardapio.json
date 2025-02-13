@@ -5,70 +5,70 @@
         "nome": "Margherita",
         "descricao": "Molho de tomate, mussarela, manjericão fresco.",
         "preco": 35.90,
-        "imagem": "url_da_imagem_margherita"
+        "imagem": "../static/imagens/margherita.jpg"
       },
       {
         "id": 2,
         "nome": "Pepperoni",
         "descricao": "Molho de tomate, mussarela, pepperoni.",
         "preco": 35.90,
-        "imagem": "url_da_imagem_pepperoni"
+        "imagem": "../static/imagens/margherita.jpg"
       },
       {
         "id": 3,
         "nome": "Quatro Queijos",
         "descricao": "Molho de tomate, mussarela, provolone, parmesão, gorgonzola.",
         "preco": 35.90,
-        "imagem": "url_da_imagem_quatro_queijos"
+        "imagem": "../static/imagens/margherita.jpg"
       },
       {
         "id": 4,
         "nome": "Calabresa",
         "descricao": "Molho de tomate, mussarela, calabresa, cebola.",
         "preco": 35.90,
-        "imagem": "url_da_imagem_calabresa"
+        "imagem": "../static/imagens/margherita.jpg"
       },
       {
         "id": 5,
         "nome": "Frango com Catupiry",
         "descricao": "Molho de tomate, mussarela, frango desfiado, catupiry.",
         "preco": 35.90,
-        "imagem": "url_da_imagem_frango_catupiry"
+        "imagem": "../static/imagens/margherita.jpg"
       },
       {
         "id": 6,
         "nome": "Portuguesa",
         "descricao": "Molho de tomate, mussarela, presunto, ovo, cebola, azeitona, pimentão.",
         "preco": 35.90,
-        "imagem": "url_da_imagem_portuguesa"
+        "imagem": "../static/imagens/margherita.jpg"
       },
       {
         "id": 7,
         "nome": "Vegetariana",
         "descricao": "Molho de tomate, mussarela, tomate, pimentão, cebola, champignon, azeitona.",
         "preco": 35.90,
-        "imagem": "url_da_imagem_vegetariana"
+        "imagem": "../static/imagens/margherita.jpg"
       },
       {
         "id": 8,
         "nome": "Bacon",
         "descricao": "Molho de tomate, mussarela, bacon, cebola.",
         "preco": 35.90,
-        "imagem": "url_da_imagem_bacon"
+        "imagem": "../static/imagens/margherita.jpg"
       },
       {
         "id": 9,
         "nome": "Napolitana",
         "descricao": "Molho de tomate, mussarela, tomate, parmesão, manjericão.",
         "preco": 35.90,
-        "imagem": "url_da_imagem_napolitana"
+        "imagem": "u../static/imagens/margherita.jpg"
       },
       {
         "id": 10,
         "nome": "Mexicana",
         "descricao": "Molho de tomate, mussarela, calabresa, pimentão, pimenta jalapeño.",
         "preco": 35.90,
-        "imagem": "url_da_imagem_mexicana"
+        "imagem": "../static/imagens/margherita.jpg"
       }
     ],
     
