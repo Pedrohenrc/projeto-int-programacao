@@ -3,16 +3,53 @@
     box-sizing: border-box;
 }
 
+.logo {
+    border-radius: 9999px;
+}
+
 header {
-    background-color: #ff0000;
-    color: #fff;
-    padding: 10px 0;
+    width: 100%;
+    height: 420px;
+    background-image: url('../static/imagens/interior-de-madeira-borrada-do-restaurante-em-cores-quentes-com-luz-de-bokeh_76000-522.avif');
+    background-size: cover;
+    background-position: center;
+    color: rgb(28, 27, 27);
+    padding: 100px 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nome {
+    background-color: #212020;
+    width: 350px;
+    border-radius: 80px;
+    color: white;
+}
+
+.endereço {
+    font-weight: 500;
+    color: white;
+}
+
+.horario {
+    background-color:rgb(22, 163, 74);
+    border-radius: 80px;
+    width: 230px;
+    margin-top: 10px;
+    margin-left: 15%;
+}
+
+header h1 {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-family: 'Arial Narrow Bold', sans-serif;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #F6F7F8;
     color: #333;
     line-height: 1.6;
     margin: 0;
