@@ -89,8 +89,8 @@
       },
       {
         "id": 3,
-        "nome": "Suco de Laranja",
-        "descricao": "Suco natural de laranja.",
+        "nome": "Cerveja",
+        "descricao": "Cerveja natural de Malte.",
         "preco": 7.90,
         "imagem": "../static/imagens/latinha.jpg"
       },
@@ -99,20 +99,6 @@
         "nome": "Água Mineral",
         "descricao": "Água mineral sem gás.",
         "preco": 3.90,
-        "imagem": "../static/imagens/latinha.jpg"
-      },
-      {
-        "id": 5,
-        "nome": "Cerveja",
-        "descricao": "Cerveja pilsen.",
-        "preco": 8.90,
-        "imagem": "../static/imagens/latinha.jpg"
-      },
-      {
-        "id": 6,
-        "nome": "Bosta",
-        "descricao": "Bosta",
-        "preco": 8.90,
         "imagem": "../static/imagens/latinha.jpg"
       }
     ]

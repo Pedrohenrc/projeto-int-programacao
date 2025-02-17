@@ -65,11 +65,13 @@
 
             <section id="pizzas">
                 <div class="containerpizza">
-                    {% for row in cardapio.bebidas|batch(3) %}
+                    {% for row in cardapio.bebidas|batch(2) %}
                         <div class="row">
                             {% for bebida in row %}
                                 <div class="pizzaaas">
-                                    <p class="preco">R$ {{ "%.2f"|format(bebida.preco) }}</p>
+                                    <strong>
+                                        <p class="preco">R$ {{ "%.2f"|format(bebida.preco) }}</p>
+                                    </strong>
                                     <div class="box-adjust">
                                         <h2>{{ bebida.nome }}</h2>
                                         <p class="descricao">{{ bebida.descricao }}</p>
