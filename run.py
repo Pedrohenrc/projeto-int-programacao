@@ -23,9 +23,17 @@ def index():
 #get = receber arquivos, ver
 #post = editar, nao necessita ver
 def enviar_pedido():
-    pedido = request.json #pedido enviado do usuario
+    peticao = request.json
+    mesa = peticao.get('mesa') #pedido enviado do usuario
+    pedidado = peticao.get('pedido')
+
+    novo_pedido = {
+        "mesa": mesa,
+        "pedido": pedidado
+    }
+
     pedidos = carregar_dados('data/pedidos.json') #abriu
-    pedidos.append(pedido) #adicionou
+    pedidos.append(novo_pedido) #adicionou
     salvar_dados('data/pedidos.json', pedidos) #fechou
     return jsonify({"status": "Pedido enviado com sucesso!"})
 
