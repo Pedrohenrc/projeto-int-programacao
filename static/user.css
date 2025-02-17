@@ -182,14 +182,41 @@ button{
     text-align: center; 
     padding: 10px 0; 
     z-index: 1000; 
+    display: flex;
+    justify-content: center;
   }
 
 #bebidas {
     margin-bottom: 50px;
 }
 
-.carrinhocompleto{
-    background-color: #000000;
-    width: 100%;
-    height: 100%;
+.carrinhocompleto {
+        background-color: rgba(0, 0, 0, 0.6); 
+        width: 100%; 
+        height: 100%; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        z-index: 99; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        display: none;
+
+
+}
+
+.carrinho {
+    background-color: white;
+    width: 680px;
+    min-height: 60%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.carrinho h2{
+    text-align: center;
+    margin-top: 20px;
 }
