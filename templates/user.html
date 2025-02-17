@@ -42,47 +42,44 @@
                     {% for row in cardapio.pizzas|batch(5) %}
                         <div class="row">
                             {% for pizza in row %}
-                                <div class="pizzaaas">
-                                    <div id="preco">
-                                        <strong>
-                                            <p class="preco">R$ {{ "%.2f"|format(pizza.preco) }}</p>
-                                        </strong>   
-                                    </div>
-                                    <div class="box-adjust">
+                                <div class="pitem">
+                                    <img src="{{ url_for('static', filename=pizza.imagem) }}" alt="{{ pizza.nome }}" class="pimg">
+                                    <div class="pinfo">
                                         <h2>{{ pizza.nome }}</h2>
                                         <p class="descricao">{{ pizza.descricao }}</p>
-                                        
+                                        <p class="preco">R$ {{ "%.2f"|format(pizza.preco) }}</p>
+                                        <button class="btn">Adicionar ao Carrinho</button>
                                     </div>
-                                    <img src="{{ url_for('static', filename=pizza.imagem) }}" alt="{{ pizza.nome }}">
                                 </div>
                             {% endfor %}
                         </div>
                     {% endfor %}
                 </div>
             </section>
-            
             <h1>Bebidas</h1>
 
-            <section id="pizzas">
-                <div class="containerpizza">
-                    {% for row in cardapio.bebidas|batch(2) %}
-                        <div class="row">
-                            {% for bebida in row %}
-                                <div class="pizzaaas">
-                                    <strong>
-                                        <p class="preco">R$ {{ "%.2f"|format(bebida.preco) }}</p>
-                                    </strong>
-                                    <div class="box-adjust">
-                                        <h2>{{ bebida.nome }}</h2>
-                                        <p class="descricao">{{ bebida.descricao }}</p>
-                                        
+            <div id="cardapio">
+                <h1>Conheça nosso cardápio</h1>
+                
+                <section id="pizzas">
+                    <div class="containerpizza">
+                        {% for row in cardapio.bebidas|batch(2) %}
+                            <div class="row">
+                                {% for bebida in row %}
+                                    <div class="pitem">
+                                        <img src="{{ url_for('static', filename=bebida.imagem) }}" alt="{{ bebida.nome }}" class="pimg">
+                                        <div class="pinfo">
+                                            <h2>{{ bebida.nome }}</h2>
+                                            <p class="descricao">{{ bebida.descricao }}</p>
+                                            <p class="preco">R$ {{ "%.2f"|format(bebida.preco) }}</p>
+                                            <button class="btn">Adicionar ao Carrinho</button>
+                                        </div>
                                     </div>
-                                    <img src="{{ url_for('static', filename=bebida.imagem) }}" alt="{{ bebida.nome }}">
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endfor %}
-                </div>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </section>
             </section>
             
         </div>

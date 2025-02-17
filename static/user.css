@@ -1,6 +1,11 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .logo {
@@ -109,47 +114,40 @@ ul {
     gap: 20px; /* Espaço entre as pizzas (colunas) */
 }
 
-
-
-.pizzaaas {
-    text-align: center;
-    margin-bottom: 20px; /* Espaçamento entre as linhas de pizzas */
-    display: flex;
-    flex-direction: row-reverse;
-    width: 50%;
-    margin: auto;
-    height: 200px;
-
-}
-
-.pizzaaas img {
-    width: 100%; /* A largura da imagem vai ocupar 100% da largura do contêiner da pizza */
-    max-width: 180px; /* Limite para o tamanho da pizza */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 15px;
-}
-
-/* Ajuste no layout das caixas de navegação das pizzas e bebidas */
-.box-pizza {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 50%;
-}
-
-.pizzas {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
-}
-
-
-
-#preco{
+.pitem {
     display: flex;
     align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.pimg {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+.pinfo {
+    display: flex;
+    flex-direction: column;
+}
+.preco {
+    font-weight: bold;
+    margin: 5px 0;
+}
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: auto;
+}
+.btn:hover {
+    background-color: #45a049;
 }
 
-    
