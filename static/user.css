@@ -202,6 +202,7 @@ button{
         align-items: center; 
         justify-content: center; 
         display: none;
+        font-family: Arial, Helvetica, sans-serif;
 
 
 }
@@ -209,14 +210,74 @@ button{
 .carrinho {
     background-color: white;
     width: 680px;
-    min-height: 60%;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
+    padding: 20px;
     border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.carrinho h2{
+.carrinho h2 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+#citens {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#ctotal {
+    font-weight: bold;
+}
+
+.paragrafooo {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.carrinho input {
+    border: 2px solid #ccc;
+    padding: 8px;
+    border-radius: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#erro {
+    color: red;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#fechar {
+    background-color: white;
+    color: black;
+}
+
+#finalizar {
+    background-color: rgb(2, 161, 2);
+    color: white;
+}
+
+#finalizar:hover {
+    background-color: rgb(1, 79, 1);
+    transition: background-color 0,3s;
+}
+
+#total {
+    margin-bottom: 8px;
 }
