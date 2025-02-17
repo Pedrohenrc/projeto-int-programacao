@@ -151,43 +151,37 @@ ul {
     background-color: #45a049;
 }
 
-<<<<<<< HEAD
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: black;
-    padding: 5px 15px; 
-    color: rgb(110, 110, 110);
-    font-size: 14px;
-    font-weight: bold;
-    position: relative;
-    height: 50px; 
-    margin-bottom: 0px;
+footer{
+    background-color: rgb(209, 29, 29);
     width: 100%;
+
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 3px; 
-    left: 15px; 
-    font-size: 12px; 
+button{
+    border: none;
+    background: none;
+    color: white;
 }
 
-.footer-nomes {
-    display: flex;
-    justify-content: center;
-    gap: 20px; 
+.fixed{
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: #333; 
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
+    z-index: 1000; 
+  }
+
+  #bebidas {
+    margin-bottom: 50px;
+  }
+
+.carrinhocompleto{
+    background-color: #000000;
     width: 100%;
-    font-size: 12px; 
-}
+    height: 100%;
 
-.footer-icons img {
-    width: 40px;
-    height: auto;
 }
-    
-=======
->>>>>>> 816d089708014ee850598c4cb29849557753bd4b
