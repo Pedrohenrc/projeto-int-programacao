@@ -1,1 +1,66 @@
-[]
+[
+    {
+        "mesa": "1",
+        "pedido": [
+            {
+                "item": "Quatro Queijos",
+                "quantidade": 2,
+                "preco": 35.9
+            }
+        ],
+        "preco": "R$ 71.80"
+    },
+    {
+        "mesa": "3",
+        "pedido": [
+            {
+                "item": "Margherita",
+                "quantidade": 1,
+                "preco": 35.9
+            },
+            {
+                "item": "Quatro Queijos",
+                "quantidade": 1,
+                "preco": 35.9
+            },
+            {
+                "item": "Coca-Cola",
+                "quantidade": 2,
+                "preco": 5.9
+            }
+        ],
+        "preco": "R$ 83.60"
+    },
+    {
+        "mesa": "1",
+        "pedido": [
+            {
+                "item": "Bacon",
+                "quantidade": 3,
+                "preco": 35.9
+            },
+            {
+                "item": "Vegetariana",
+                "quantidade": 2,
+                "preco": 35.9
+            }
+        ],
+        "preco": 179.5
+    },
+    {
+        "mesa": "1",
+        "pedido": [
+            {
+                "item": "Frango com Catupiry",
+                "quantidade": 3,
+                "preco": 35.9
+            },
+            {
+                "item": "Coca-Cola",
+                "quantidade": 2,
+                "preco": 5.9
+            }
+        ],
+        "preco": 119.5
+    }
+]

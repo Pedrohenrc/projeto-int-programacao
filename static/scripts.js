@@ -4,7 +4,7 @@ const cartModal = document.getElementById('cart-modal');
 const cartItemsContainer = document.getElementById('cartitems');
 const cartTotal = document.getElementById('cart-total');
 const cartCloseBtn = document.getElementById('fechar');
-const cartChackOutBtn = document.getElementById('finalizar');
+const finalizar = document.getElementById('finalizar');
 const cartCounter = document.getElementById('cart-counter');
 
 let cart = [];
@@ -129,12 +129,36 @@ function removeItemCart(name){
   }
 }
 
-
-cartChackOutBtn.addEventListener('click', function(){
+//Funcao para enviar o pedido para o apiflask
+finalizar.addEventListener('click', function(){
   if(cart.length === 0) return;
-  
-  
 
-  
+  const mesa = document.getElementById('mesa').value;  
 
-})
+  const pedido = {
+    mesa: mesa,
+    Pedido: {
+      pedido: cart.map(item => ({
+        item: item.name,
+        quantidade: item.qtd,
+        preco: item.price
+      })),
+      precoo: parseFloat((cartTotal.textContent).replace('R$ ', ""))
+    }
+  };
+
+  fetch('/enviar.pedidos', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(pedido)
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log('Sucesso:', data);
+      alert('Pedido enviado com sucesso!');
+      cart = []; 
+      updateCartModal(); 
+  });
+});
