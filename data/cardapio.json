@@ -74,28 +74,28 @@
     
     "bebidas": [
       {
-        "id": 1,
+        "id": 11,
         "nome": "Coca-Cola",
         "descricao": "Refrigerante de cola.",
         "preco": 5.90,
         "imagem": "../static/imagens/latinha.jpg"
       },
       {
-        "id": 2,
+        "id": 12,
         "nome": "Guaraná",
         "descricao": "Refrigerante de guaraná.",
         "preco": 5.90,
         "imagem": "../static/imagens/latinha.jpg"
       },
       {
-        "id": 3,
+        "id": 13,
         "nome": "Cerveja",
         "descricao": "Cerveja natural de Malte.",
         "preco": 7.90,
         "imagem": "../static/imagens/latinha.jpg"
       },
       {
-        "id": 4,
+        "id": 14,
         "nome": "Água Mineral",
         "descricao": "Água mineral sem gás.",
         "preco": 3.90,
