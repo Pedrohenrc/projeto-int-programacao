@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
     
 }
 
@@ -71,9 +74,10 @@ body {
     gap: 50px;
 }
 
-#cardapio h1 {
+.hd1 {
     text-align: center;
     color: red;
+    padding: 50px;
 }
 
 .imagem img {
@@ -133,6 +137,11 @@ ul {
     display: flex;
     flex-direction: column;
 }
+
+.descricao{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
 .preco {
     font-weight: bold;
     margin: 5px 0;
@@ -164,12 +173,18 @@ footer {
     height: 50px; 
     margin-bottom: 0px;
     width: 100%;
+    cursor: pointer;
 }
 
 button{
     border: none;
     background: none;
     color: white;
+}
+
+#cart-btn{
+    cursor: pointer;
+    width: 100%;
 }
 
 .fixed{
@@ -198,10 +213,9 @@ button{
         top: 0; 
         left: 0; 
         z-index: 99; 
-        display: flex; 
+        display: none; 
         align-items: center; 
         justify-content: center; 
-        display: none;
         font-family: Arial, Helvetica, sans-serif;
 
 
@@ -228,6 +242,7 @@ button{
     flex-direction: column;
     margin-bottom: 10px;
 }
+
 
 #ctotal {
     font-weight: bold;
@@ -280,4 +295,38 @@ button{
 
 #total {
     margin-bottom: 8px;
+    font-size: 25px;
+}
+
+.itemincart{
+    display: flex;
+    width: 640px;
+    justify-content: space-between;
+ 
+    
+}
+
+.itin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin: 20px;
+
+}
+
+.cartitems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.remove{
+    cursor: pointer;
+    color: black;
+}
+
+.remove:hover{
+    color: red;
 }

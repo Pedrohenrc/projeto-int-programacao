@@ -1,72 +1,140 @@
-// Aqui você pode adicionar seu código JavaScript
+const menu = document.getElementById('menu');
+const cartBtn = document.getElementById('cart-btn');
+const cartModal = document.getElementById('cart-modal');
+const cartItemsContainer = document.getElementById('cartitems');
+const cartTotal = document.getElementById('cart-total');
+const cartCloseBtn = document.getElementById('fechar');
+const cartChackOutBtn = document.getElementById('finalizar');
+const cartCounter = document.getElementById('cart-counter');
 
-// Exemplo de função para carregar o cardápio
-async function carregarCardapio() {
-    try {
-      const response = await fetch('/api/cardapio');
-      const data = await response.json();
-      // Aqui você pode manipular os dados do cardápio
-    } catch (error) {
-      console.error('Erro ao carregar o cardápio:', error);
+let cart = [];
+
+//Função para mostrar os itens no carrinho
+cartBtn.addEventListener('click', function() {
+  cartModal.style.display = 'flex'
+})
+
+//Função para fechar o carrinho clicando fora
+cartModal.addEventListener('click', function(event) {
+  if (event.target === cartModal) {
+    cartModal.style.display = 'none'
+  }
+})
+
+//Função para fechar o carrinho clicando no botão
+cartCloseBtn.addEventListener('click', function() {
+  cartModal.style.display = 'none'
+})
+
+//Função para adicionar valores a items
+menu.addEventListener('click', function(event) {
+  let parentButton = event.target.closest('.btn');
+
+  if(parentButton) {
+    const name = parentButton.getAttribute('data-name');
+    const price = parseFloat(parentButton.getAttribute('data-price'));
+    const id = parentButton.getAttribute('data-id');
+
+    addToCart(name, price);
+  }
+
+})
+
+//Função para adicionar itens ao carrinho
+
+function addToCart(name, price){
+
+  const verification = cart.find(item => item.name === name); 
+  
+  if(verification){
+
+    verification.qtd += 1;
+  }else{
+
+    cart.push({
+      name,
+      price,
+      qtd: 1,
+    })
+
+
+  }
+
+  updateCartModal();
+
+}
+
+//Função para mostrar os itens no carrinho
+function updateCartModal(){
+  cartItemsContainer.innerHTML = '';
+  let total = 0;
+
+  cart.forEach(item => {
+    const cartItemElement = document.createElement('div');
+    cartItemElement.classList.add("itemincart");
+    cartItemElement.innerHTML = `
+      <div class="itin">
+        <div>
+          <strong>
+            <p>${item.name}</p>
+          </strong>
+          <p>Quantidade: ${item.qtd}</p>
+          <p>R$ ${item.price.toFixed(2)}</p>
+        </div>
+
+
+          <button class='remove' data-name='${item.name}''>
+            Remover
+
+          </button>
+      </div>
+
+    `
+
+
+    total += item.price * item.qtd;
+
+    cartItemsContainer.appendChild(cartItemElement);
+
+  });
+
+  cartTotal.innerHTML = `R$ ${total.toFixed(2)}`;
+
+  cartCounter.innerHTML = cart.length;
+}
+
+//Função para remover itens do carrinho
+cartItemsContainer.addEventListener('click', function(event){
+  if(event.target.classList.contains('remove')){
+    const name = event.target.getAttribute('data-name')
+
+    removeItemCart(name)
+  }
+});
+
+function removeItemCart(name){
+  const index = cart.findIndex(item => item.name === name);
+
+  if(index !== -1){
+    const item = cart[index];
+
+    if(item.qtd > 1){
+      item.qtd -= 1;
+      updateCartModal();
+      return;
     }
-  }
-  
-  // Exemplo de função para enviar pedido
-  async function enviarPedido(pedido) {
-    try {
-      const response = await fetch('/api/pedidos', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(pedido)
-      });
-      const data = await response.json();
-    
-    } catch (error) {
-      console.error('Erro ao enviar pedido:', error);
-    }
-  }
 
-  let carrinho = [];
+    cart.splice(index, 1);
+    updateCartModal();
+  }
+}
 
-  // Função para adicionar item ao carrinho
-  function adicionarAoCarrinho(nome, preco, id) {
-      const quantidade = document.getElementById(`qtd-${id}`).value;
+
+cartChackOutBtn.addEventListener('click', function(){
+  if(cart.length === 0) return;
   
-      const item = {
-          nome: nome,
-          preco: preco,
-          quantidade: parseInt(quantidade)
-      };
   
-      carrinho.push(item);
-      console.log("Carrinho atualizado:", carrinho);
-      alert(`${quantidade}x ${nome} adicionado ao carrinho!`);
-  }
+
   
-  // Função para enviar o pedido para o backend
-  async function enviarPedido() {
-      const mesa = prompt("Número da mesa:");
-  
-      const pedido = {
-          mesa: mesa,
-          pedido: carrinho
-      };
-  
-      try {
-          const response = await fetch('/enviar.pedidos', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(pedido)
-          });
-  
-          const data = await response.json();
-          alert(data.status);
-          carrinho = []; // Limpa o carrinho após o envio
-      } catch (error) {
-          console.error('Erro ao enviar o pedido:', error);
-      }
-  }
+
+})
