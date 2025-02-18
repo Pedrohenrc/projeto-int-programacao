@@ -130,11 +130,3 @@ function removeItemCart(name){
 }
 
 
-cartChackOutBtn.addEventListener('click', function(){
-  if(cart.length === 0) return;
-  
-  
-
-  
-
-})
