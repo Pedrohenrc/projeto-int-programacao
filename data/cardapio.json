@@ -19,28 +19,28 @@
         "nome": "Quatro Queijos",
         "descricao": "Molho de tomate, mussarela, provolone, parmesão, gorgonzola.",
         "preco": 35.90,
-        "imagem": "../static/imagens/margherita.jpeg"
+        "imagem": "../static/imagens/queijos.webp"
       },
       {
         "id": 4,
         "nome": "Calabresa",
         "descricao": "Molho de tomate, mussarela, calabresa, cebola.",
         "preco": 35.90,
-        "imagem": "../static/imagens/margherita.jpeg"
+        "imagem": "../static/imagens/calabresa.jpg"
       },
       {
         "id": 5,
         "nome": "Frango com Catupiry",
         "descricao": "Molho de tomate, mussarela, frango desfiado, catupiry.",
         "preco": 35.90,
-        "imagem": "../static/imagens/margherita.jpeg"
+        "imagem": "../static/imagens/frango.jpg"
       },
       {
         "id": 6,
         "nome": "Portuguesa",
         "descricao": "Molho de tomate, mussarela, presunto, ovo, cebola, azeitona, pimentão.",
         "preco": 35.90,
-        "imagem": "../static/imagens/margherita.jpeg"
+        "imagem": "../static/imagens/portuguesa.jpg"
       },
       {
         "id": 7,
@@ -54,7 +54,7 @@
         "nome": "Bacon",
         "descricao": "Molho de tomate, mussarela, bacon, cebola.",
         "preco": 35.90,
-        "imagem": "../static/imagens/margherita.jpeg"
+        "imagem": "../static/imagens/bacon.avif"
       },
       {
         "id": 9,
@@ -85,21 +85,21 @@
         "nome": "Guaraná",
         "descricao": "Refrigerante de guaraná.",
         "preco": 5.90,
-        "imagem": "../static/imagens/latinha.jpg"
+        "imagem": "../static/imagens/202039_10951.jpg"
       },
       {
         "id": 13,
         "nome": "Cerveja",
         "descricao": "Cerveja natural de Malte.",
         "preco": 7.90,
-        "imagem": "../static/imagens/latinha.jpg"
+        "imagem": "../static/imagens/cerveja.webp"
       },
       {
         "id": 14,
         "nome": "Água Mineral",
         "descricao": "Água mineral sem gás.",
         "preco": 3.90,
-        "imagem": "../static/imagens/latinha.jpg"
+        "imagem": "../static/imagens/agua.jpg"
       }
     ]
   }
