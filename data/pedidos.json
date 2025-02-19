@@ -73,5 +73,31 @@
             }
         ],
         "preco": 17
+    },
+    {
+        "mesa": "1",
+        "pedido": [
+            {
+                "item": "Portuguesa",
+                "quantidade": 2,
+                "preco": 35.9
+            },
+            {
+                "item": "Pepperoni",
+                "quantidade": 1,
+                "preco": 35.9
+            },
+            {
+                "item": "Napolitana",
+                "quantidade": 1,
+                "preco": 35.9
+            },
+            {
+                "item": "Coca-Cola",
+                "quantidade": 1,
+                "preco": 5.9
+            }
+        ],
+        "preco": 149
     }
 ]
