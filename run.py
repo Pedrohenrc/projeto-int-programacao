@@ -43,7 +43,7 @@ def enviar_pedido():
 @app.route('/cozinha')
 def cozinha():
     pedidos = carregar_dados('data/pedidos.json')
-    return render_template('cozinha.html', pedidos = pedidos)
+    return render_template("cozinha.html", pedidos = pedidos)
 
 @app.route('/atualizar_pedido/<int:pedido_id>', methods=["POST"])
 def enviarpedido (id_pedido):
