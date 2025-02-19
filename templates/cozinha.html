@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cozinha</title>
+    <link rel="stylesheet" href="../static/cozinha.css">
 </head>
 <body>
-    <h1>Pedidos</h1>
+    <header>
+        <h1>Pedidos</h1>
+
+        <div><img class="logo" src="../static/imagens/chef-italiano-com-uma-ilustração-do-vetor-pizza-pizzaiolo-para-design-de-menu-embalagem-etiqueta-etc-184576035.webp" alt=""></div>
+    </header>
+
+    <div class="tudo">
+        <div class="pedidos-botao">
+            <div class="pedidos"><p>pizza  sabor samuel negão comendo pedrinha galega</p></div>
+            <div class="botão">
+                <button class="conf">Confirmar</button>
+                <button class="rec">Recusar</button>
+            </div>
+        </div>
+        <div class="pago">
+            <button>Pedido Pago</button>
+        </div>
+    </div>
+
     <ul>
         {% for pedido in pedidos %}
             <li>{{ pedido }}</li>
         {% endfor %}
     </ul>
+
+
 </body>
 </html>

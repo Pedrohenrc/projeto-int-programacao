@@ -19,17 +19,20 @@ def index():
     cardapio = carregar_dados('data/cardapio.json')
     return render_template("user.html", cardapio=cardapio)
 
+# Rota para enviar pedidos
 @app.route('/enviar.pedidos', methods = ['POST'])
 #get = receber arquivos, ver
 #post = editar, nao necessita ver
 def enviar_pedido():
     peticao = request.json
     mesa = peticao.get('mesa') #pedido enviado do usuario
-    pedidado = peticao.get('pedido')
+    pedidado = peticao.get('Pedido').get('pedido')
+    preço = peticao.get('Pedido').get('precoo')
 
     novo_pedido = {
         "mesa": mesa,
-        "pedido": pedidado
+        "pedido": pedidado,
+        "preco": preço
     }
 
     pedidos = carregar_dados('data/pedidos.json') #abriu

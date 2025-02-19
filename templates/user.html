@@ -81,11 +81,19 @@
         <div class="carrinho">
             <h2>Meu Carrinho</h2>
             <p class="paragrafooo">Mesa:</p>
-            <input
-                type="text"
-                placeholder="Digite o número da sua mesa"
-                id="mesa"
-            />
+            <label for="mesa">Escolha sua mesa: </label>
+            <select id="mesa" name="mesa">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
             <p id="erro">Digite sua mesa</p>
             <div id="cartitems">
             </div>
@@ -96,10 +104,6 @@
             </div>
         </div>
     </div>
-
-    
-
-   
 
     <footer class="fixed"> 
         <button id="cart-btn">
