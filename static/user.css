@@ -76,7 +76,7 @@ body {
 
 .hd1 {
     text-align: center;
-    color: red;
+    color: rgb(35, 34, 34);
     padding: 50px;
 }
 
@@ -261,7 +261,7 @@ button{
 }
 
 #erro {
-    color: red;
+    color: rgb(49, 48, 48);
     display: none;
     margin-bottom: 10px;
 }

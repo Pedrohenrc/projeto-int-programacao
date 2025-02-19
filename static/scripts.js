@@ -162,3 +162,4 @@ finalizar.addEventListener('click', function(){
       updateCartModal(); 
   });
 });
+

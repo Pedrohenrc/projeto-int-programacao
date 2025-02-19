@@ -67,17 +67,6 @@
         "mesa": "1",
         "pedido": [
             {
-                "item": "Calabresa",
-                "quantidade": 9,
-                "preco": 35.9
-            }
-        ],
-        "preco": 323.1
-    },
-    {
-        "mesa": "1",
-        "pedido": [
-            {
                 "item": "Pepperoni",
                 "quantidade": 4,
                 "preco": 35.9
