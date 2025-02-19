@@ -84,5 +84,21 @@
             }
         ],
         "preco": 215.4
+    },
+    {
+        "mesa": "3",
+        "pedido": [
+            {
+                "item": "Coca-Cola",
+                "quantidade": 1,
+                "preco": 5.9
+            },
+            {
+                "item": "Guaran\u00e1",
+                "quantidade": 1,
+                "preco": 5.9
+            }
+        ],
+        "preco": 11.8
     }
 ]

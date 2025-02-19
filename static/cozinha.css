@@ -3,11 +3,16 @@
 header{
     background-color: rgb(49, 47, 47);
     color: white;
-    font-size: 30px;
+    font-size: 26px;
     max-height: auto;
-    text-align: center;
+    display: flex;
     margin: auto;
+    padding: 10px;
+    gap: 1000px;
+    justify-content: center;
+    width: 100%;
 }
+
 
 .logo {
     border-radius: 9999px;
@@ -16,35 +21,71 @@ header{
     margin-top: 10px; 
 }
 
-.tudo{
-    display: flex;
-    flex-direction: column;
-    margin-left: 200px;
+body{
+    background-color: #e7dcdc;
 }
 
-.pedidos-botao{
-    display: flex;
+main h1 {
+    text-align: center;
+    margin-top: 50px;
 }
 
-.botão{
-    display: flex;
-    flex-direction: column;
-}
 
-.conf {
-    border: none;
-    background: none;
-    background-color: rgb(18, 111, 18);
-    height: 150px;
-    width: 100px;
-}
+
 
 .rec {
-    border: none;
-    background: none;
-    background-color: rgb(129, 20, 20);
-    height: 150px;
-    width: 100px;
+    border: none; 
+    background: none; 
+    background-color: rgb(129, 20, 20); 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    
+}
+
+
+.rec:hover {
+    background-color: rgb(100, 15, 15); 
+}
+
+
+.rec:active {
+    background-color: rgb(80, 10, 10); 
+}
+
+
+.rec:focus {
+    outline: none; 
+    box-shadow: 0 0 0 2px rgba(129, 20, 20, 0.5); 
+}
+
+
+.conf {
+    border: none; 
+    background: none; 
+    background-color: rgb(29, 129, 20); 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px;  
+    border-radius: 5px; 
+
+}
+
+
+.conf:hover {
+    background-color: rgb(15, 100, 19); 
+}
+
+
+.conf:active {
+    background-color: rgb(21, 80, 10); 
+}
+
+
+.conf:focus {
+    outline: none; 
+    box-shadow: 0 0 0 2px rgba(129, 20, 20, 0.5); 
 }
 
 .pedidos {
@@ -53,18 +94,37 @@ header{
     margin: 10px 0;
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 400px;
-    height: 300px;
     color: black;
     font-size: 25px;
+    display: flex;
+    gap: 60%;
+    width: 500px;
+    margin-left: 100px;
+}
+
+.pedidos2 {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: black;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 60%;
+    width: 500px;
+    margin-left: 100px;
+   
 }
 
 .pago {
-    border: none;
-    background: none;
-    background-color: rgb(47, 45, 45);
-    color: white;
-    font-size: 20px;
-    width: 500px;
-    height: 50px;
+    border: none; 
+    background: none; 
+    background-color: rgb(28, 30, 28); 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px;  
+    border-radius: 5px; 
+    text-align: center;
 }
