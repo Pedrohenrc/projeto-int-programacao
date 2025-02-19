@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 import json
 import os
 
@@ -13,9 +13,20 @@ def carregar_dados(caminho):
 def salvar_dados(caminho, dados):
     with open(caminho, "w", encoding="utf-8") as file:
         json.dump(dados, file, indent=4)
-
+        
 @app.route('/')
 def index():
+    caminho = request.json
+
+    if caminho == 'cliente':
+        return redirect(url_for('cardapio'))
+    elif caminho == 'chefe':
+        return redirect(url_for('cozinha'))
+                        
+    return render_template("pagina inicial.html")
+
+@app.route('/cardapio')
+def cardapio():
     cardapio = carregar_dados('data/cardapio.json')
     return render_template("user.html", cardapio=cardapio)
 
