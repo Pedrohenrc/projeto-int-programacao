@@ -62,5 +62,16 @@
             }
         ],
         "preco": 119.5
+    },
+    {
+        "mesa": "1",
+        "pedido": [
+            {
+                "item": "Coca-Cola",
+                "quantidade": 3,
+                "preco": 5.9
+            }
+        ],
+        "preco": 17
     }
 ]
