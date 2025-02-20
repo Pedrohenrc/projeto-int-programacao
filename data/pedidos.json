@@ -1,26 +1,24 @@
 [
     {
-        "id": 4,
+        "id": 6,
         "mesa": "1",
         "pedido": [
             {
-                "item": "Portuguesa",
+                "item": "Margherita",
                 "quantidade": 1,
                 "preco": 35.9
-            }
-        ],
-        "preco": 35.9
-    },
-    {
-        "id": 5,
-        "mesa": "1",
-        "pedido": [
+            },
             {
                 "item": "Pepperoni",
-                "quantidade": 3,
+                "quantidade": 1,
                 "preco": 35.9
+            },
+            {
+                "item": "Guaran\u00e1",
+                "quantidade": 1,
+                "preco": 5.9
             }
         ],
-        "preco": 107.7
+        "preco": 77.7
     }
 ]
