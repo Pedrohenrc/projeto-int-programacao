@@ -330,3 +330,25 @@ button{
 .remove:hover{
     color: red;
 }
+
+
+.mensagem {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1fbb00;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1000;
+}
+
+
+.mensagem.mostrar {
+    opacity: 1;
+    transform: translateX(0);
+}

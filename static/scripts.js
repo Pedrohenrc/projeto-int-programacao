@@ -61,6 +61,7 @@ function addToCart(name, price){
   }
 
   updateCartModal();
+  exibirMensagem();
 
 }
 
@@ -162,3 +163,13 @@ finalizar.addEventListener('click', function(){
   });
 });
 
+function exibirMensagem() {
+  const mensagem = document.getElementById('mensagem')
+
+  mensagem.classList.add('mostrar');
+
+  setTimeout(() => {
+    mensagem.classList.remove('mostrar')
+  }, 2000)
+
+}

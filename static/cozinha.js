@@ -1,3 +1,17 @@
+//Exibir Mensagem
+function exibirMensagem(acao) {
+    const mensagem = document.getElementById('mensagem')
+    const acaoSpan = document.getElementById('acao')
+
+    acaoSpan.textContent = acao;
+
+    mensagem.classList.add('mostrar');
+
+    setTimeout(() =>{
+        mensagem.classList.remove('mostrar');
+    }, 2000);
+}
+
 
 //Recusar o pedido
 function recusarPedido(pedidoElement) {
@@ -10,6 +24,7 @@ function recusarPedido(pedidoElement) {
     .then(() => {
         pedidoElement.remove(); 
     })
+
 }
 
 document.querySelectorAll('.recusar').forEach(button => {
@@ -36,6 +51,7 @@ function aceitarPedido(pedidoElement) {
         pedidoElement.remove();
         const pedido_id = pedidoElement.dataset.id;
         console.log(`Pedido ${pedido_id} marcado como pago e removido.`)
+        exibirMensagem('pago')
         
         fetch(`/remover_pedido/${pedido_id}`, {
             method: 'DELETE',
@@ -44,6 +60,8 @@ function aceitarPedido(pedidoElement) {
     .then(() => {
         pedidoElement.remove();
     })
+
+    exibirMensagem('pago')
 })}
 document.querySelectorAll('.Pago').forEach(button => {
     button.addEventListener('click', function() {
@@ -59,9 +77,11 @@ document.querySelector('.pedidos-pendentes').addEventListener('click', (event) =
     if (event.target.classList.contains('aceitar')) {
         const pedidoElement = event.target.closest('.pedido');
         aceitarPedido(pedidoElement);
+        exibirMensagem('aceito')
 
     } else if (event.target.classList.contains('recusar')) {
         const pedidoElement = event.target.closest('.pedido');
         recusarPedido(pedidoElement);
+        exibirMensagem('recusado')
     }
 });
