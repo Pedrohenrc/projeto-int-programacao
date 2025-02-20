@@ -1,1 +1,24 @@
-[]
+[
+    {
+        "id": 2,
+        "mesa": "7",
+        "pedido": [
+            {
+                "item": "Cerveja",
+                "quantidade": 1,
+                "preco": 7.9
+            },
+            {
+                "item": "Coca-Cola",
+                "quantidade": 1,
+                "preco": 5.9
+            },
+            {
+                "item": "Guaran\u00e1",
+                "quantidade": 1,
+                "preco": 5.9
+            }
+        ],
+        "preco": 19.7
+    }
+]
