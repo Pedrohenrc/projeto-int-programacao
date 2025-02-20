@@ -230,12 +230,12 @@ main{
 
 
 .pedidos-aceitos .pedido .btn-pago:hover {
-    background-color: rgb(15, 100, 19); 
+    background-color: rgb(47, 47, 47); 
 }
 
 /* Efeito active no botão "Pago" */
 .pedidos-aceitos .pedido .btn-pago:active {
-    background-color: rgb(21, 80, 10); 
+    background-color: rgb(84, 84, 84); 
 }
 
 /* Efeito focus no botão "Pago" */
