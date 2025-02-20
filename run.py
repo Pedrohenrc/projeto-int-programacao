@@ -15,15 +15,8 @@ def salvar_dados(caminho, dados):
         json.dump(dados, file, indent=4)
         
 @app.route('/')
-def index():
-    caminho = request.json
-
-    if caminho == 'cliente':
-        return redirect(url_for('cardapio'))
-    elif caminho == 'chefe':
-        return redirect(url_for('cozinha'))
-                        
-    return render_template("pagina inicial.html")
+def index():                    
+    return render_template("paginainicial.html")
 
 @app.route('/cardapio')
 def cardapio():
