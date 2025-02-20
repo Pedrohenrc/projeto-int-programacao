@@ -6,12 +6,12 @@ app = Flask(__name__)
 
 def carregar_dados(caminho):
     if os.path.exists(caminho):
-        with open(caminho, "r", encoding="utf-8") as file:
+        with open(caminho, "r") as file:
             return json.load(file)
     return []
 
 def salvar_dados(caminho, dados):
-    with open(caminho, "w", encoding="utf-8") as file:
+    with open(caminho, "w") as file:
         json.dump(dados, file, indent=4)
         
 @app.route('/')

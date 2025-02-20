@@ -36,6 +36,7 @@ function aceitarPedido(pedidoElement) {
         pedidoElement.remove();
         const pedido_id = pedidoElement.dataset.id;
         console.log(`Pedido ${pedido_id} marcado como pago e removido.`)
+        
         fetch(`/remover_pedido/${pedido_id}`, {
             method: 'DELETE',
     })
