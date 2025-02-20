@@ -25,6 +25,7 @@ def redirecionar():
         return jsonify({"url": url_for('cardapio')})
     elif caminho == 'cozinha':
         return jsonify({"url": url_for('cozinha')})
+    
 @app.route('/cardapio')
 def cardapio():
     cardapio = carregar_dados('data/cardapio.json')
