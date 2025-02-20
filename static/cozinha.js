@@ -26,10 +26,8 @@ function recusarPedido(pedidoElement) {
 
     fetch(`/remover_pedido/${pedido_id}`, {
         method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json'
-        },
     })
+    
     .then(response => response.json())
     .then(() => {
         pedidoElement.remove(); 
