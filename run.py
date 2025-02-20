@@ -17,7 +17,14 @@ def salvar_dados(caminho, dados):
 @app.route('/')
 def index():
     return render_template("paginainicial.html")
+@app.route('/redirecionar', methods = ['POST'])
+def redirecionar():
+    caminho = request.json.get('caminho')
 
+    if caminho == 'cliente':
+        return jsonify({"url": url_for('cardapio')})
+    elif caminho == 'cozinha':
+        return jsonify({"url": url_for('cozinha')})
 @app.route('/cardapio')
 def cardapio():
     cardapio = carregar_dados('data/cardapio.json')
@@ -73,14 +80,7 @@ def removerpedido (pedido_id):
 
     return jsonify({"mensagem": "Pedido enviado com sucesso"})
 
-@app.route('/redirecionar', methods = ['POST'])
-def redirecionar():
-    caminho = request.json.get('caminho')
 
-    if caminho == 'cliente':
-        return jsonify({"url": url_for('cardapio')})
-    elif caminho == 'cozinha':
-        return jsonify({"url": url_for('cozinha')})
 
 if __name__ == "__main__":
     app.run(debug=True)
