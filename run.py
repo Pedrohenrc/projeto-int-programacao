@@ -6,24 +6,17 @@ app = Flask(__name__)
 
 def carregar_dados(caminho):
     if os.path.exists(caminho):
-        with open(caminho, "r", encoding="utf-8") as file:
+        with open(caminho, "r") as file:
             return json.load(file)
     return []
 
 def salvar_dados(caminho, dados):
-    with open(caminho, "w", encoding="utf-8") as file:
+    with open(caminho, "w") as file:
         json.dump(dados, file, indent=4)
         
 @app.route('/')
-def index():
-    caminho = request.json
-
-    if caminho == 'cliente':
-        return redirect(url_for('cardapio'))
-    elif caminho == 'chefe':
-        return redirect(url_for('cozinha'))
-                        
-    return render_template("pagina inicial.html")
+def index():                    
+    return render_template("paginainicial.html")
 
 @app.route('/cardapio')
 def cardapio():
@@ -48,7 +41,7 @@ def enviar_pedido():
         for pedido in pedidos:
             if pedido['id'] > maior:
                 maior = pedido['id']
-    else: maior = 1
+    else: maior = 0
 
     novo_pedido = {
         "id": maior + 1,

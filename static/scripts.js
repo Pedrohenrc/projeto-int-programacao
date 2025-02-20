@@ -154,7 +154,6 @@ finalizar.addEventListener('click', function(){
     },
     body: JSON.stringify(pedido)
   })
-  .then(response => response.json())
   .then(data => {
       console.log('Sucesso:', data);
       alert('Pedido enviado com sucesso!');

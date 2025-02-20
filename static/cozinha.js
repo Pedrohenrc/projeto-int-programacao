@@ -1,3 +1,24 @@
+
+//Recusar o pedido
+function recusarPedido(pedidoElement) {
+    const pedido_id = pedidoElement.dataset.id;
+
+    fetch(`/remover_pedido/${pedido_id}`, {
+        method: 'DELETE',
+    })
+
+    .then(() => {
+        pedidoElement.remove(); 
+    })
+}
+
+document.querySelectorAll('.recusar').forEach(button => {
+    button.addEventListener('click', function() {
+        const pedidoElement = this.closest('.pedido');
+        recusarPedido(pedidoElement);
+    });
+});
+
 //Função para mover os pedidos para a seção de pedidos aceitos
 function aceitarPedido(pedidoElement) {
     const pedidosAceitos = document.querySelector('.pedidos-aceitos')
@@ -13,33 +34,25 @@ function aceitarPedido(pedidoElement) {
 
     botaoPago.addEventListener('click', () => {
         pedidoElement.remove();
-        const pedidoId = pedidoElement.dataset.id;
-        console.log(`Pedido ${pedidoId} marcado como pago e removido.`)
-        //Oh meu mano backend, atualiza o json ai porfavor
-
-    });
-}
-
-//Recusar o pedido
-function recusarPedido(pedidoElement) {
-    const pedido_id = pedidoElement.dataset.id;
-
-    fetch(`/remover_pedido/${pedido_id}`, {
-        method: 'DELETE',
+        const pedido_id = pedidoElement.dataset.id;
+        console.log(`Pedido ${pedido_id} marcado como pago e removido.`)
+        
+        fetch(`/remover_pedido/${pedido_id}`, {
+            method: 'DELETE',
     })
     
-    .then(response => response.json())
     .then(() => {
-        pedidoElement.remove(); 
+        pedidoElement.remove();
     })
-}
-
-document.querySelectorAll('.recusar').forEach(button => {
+})}
+document.querySelectorAll('.Pago').forEach(button => {
     button.addEventListener('click', function() {
         const pedidoElement = this.closest('.pedido');
         recusarPedido(pedidoElement);
     });
 });
+
+
 
 //Adiciona os eventos de aceitar e recusar pedido
 document.querySelector('.pedidos-pendentes').addEventListener('click', (event) => {
