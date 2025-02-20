@@ -233,13 +233,34 @@ main{
     background-color: rgb(47, 47, 47); 
 }
 
-/* Efeito active no botão "Pago" */
+
 .pedidos-aceitos .pedido .btn-pago:active {
     background-color: rgb(84, 84, 84); 
 }
 
-/* Efeito focus no botão "Pago" */
+
 .pedidos-aceitos .pedido .btn-pago:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(29, 129, 20, 0.5); 
+}
+
+
+.mensagem {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1000;
+}
+
+.mensagem.mostrar {
+    opacity: 1;
+    transform: translateX(0);
 }
