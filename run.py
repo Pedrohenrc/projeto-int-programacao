@@ -35,39 +35,51 @@ def cardapio():
 #get = receber arquivos, ver
 #post = editar, nao necessita ver
 def enviar_pedido():
+
+    pedidos = carregar_dados('data/pedidos.json')
     peticao = request.json
+
     mesa = peticao.get('mesa') #pedido enviado do usuario
     pedidado = peticao.get('Pedido').get('pedido')
     preço = peticao.get('Pedido').get('precoo')
 
+    if pedidos:
+        maior = pedidos[0]['id']
+        for pedido in pedidos:
+            if pedido['id'] > maior:
+                maior = pedido['id']
+    else: maior = 1
+
     novo_pedido = {
+        "id": maior + 1,
         "mesa": mesa,
         "pedido": pedidado,
-        "preco": preço
+        "preco": preço,
     }
 
-    pedidos = carregar_dados('data/pedidos.json') #abriu
     pedidos.append(novo_pedido) #adicionou
     salvar_dados('data/pedidos.json', pedidos) #fechou
     return jsonify({"status": "Pedido enviado com sucesso!"})
+
 
 @app.route('/cozinha')
 def cozinha():
     pedidos = carregar_dados('data/pedidos.json')
     return render_template("cozinha.html", pedidos = pedidos)
 
-@app.route('/atualizar_pedido/<int:pedido_id>', methods=["POST"])
-def enviarpedido (id_pedido):
+@app.route('/remover_pedido/<int:pedido_id>', methods=["DELETE"])
+def removerpedido (pedido_id): 
     pedidos = carregar_dados('data/pedidos.json')
-    acao = request.json.get('acao')
 
-    if acao == 'confirmar':
-        pedidos[id_pedido]['status'] = 'confirmado'
-    elif acao == 'recusado':
-        pedidos[id_pedido]['status'] = 'recusado'
-
+    for pedido in pedidos:
+        if pedido["id"] == pedido_id:
+            pedidos.remove(pedido)
+            break
+    
     salvar_dados('data/pedidos.json', pedidos)
-    return jsonify ({'Status: resposta recebida com sucesso!'})
+
+    return jsonify({"mensagem": "Pedido enviado com sucesso"})
+
 
 if __name__ == "__main__":
     app.run(debug=True)

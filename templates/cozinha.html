@@ -18,7 +18,7 @@
         <!--Seção pedidos pendentes-->
         <section class="pedidos-pendentes">
             {% for pedido in pedidos %}
-                <div class="pedido" data-id="{{ loop.index0 }}">
+                <div class="pedido" data-id="{{ pedido.id }}">
                     <h2>Mesa: {{ pedido.mesa }}</h2>
                     <ul>
                         {% for item in pedido.pedido %}

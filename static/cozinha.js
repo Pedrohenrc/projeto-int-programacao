@@ -22,12 +22,28 @@ function aceitarPedido(pedidoElement) {
 
 //Recusar o pedido
 function recusarPedido(pedidoElement) {
-    pedidoElement.remove();
-    const pedidoId = pedidoElement.dataset.id;
-    console.log(`Pedido ${pedidoId} recusado e removido.`)
+    const pedido_id = pedidoElement.dataset.id;
+    console.log(`Pedido ${pedido_id} recusado e removido.`);
 
-    //Oh meu mano backend, atualiza o json ai porfavor
+    fetch(`/remover_pedido/${pedido_id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Pedido removido com sucesso:', data);
+        pedidoElement.remove(); 
+    })
 }
+
+document.querySelectorAll('.recusar').forEach(button => {
+    button.addEventListener('click', function() {
+        const pedidoElement = this.closest('.pedido');
+        recusarPedido(pedidoElement);
+    });
+});
 
 //Adiciona os eventos de aceitar e recusar pedido
 document.querySelector('.pedidos-pendentes').addEventListener('click', (event) => {
