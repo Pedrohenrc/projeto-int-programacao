@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, url_for
 import json
 import os
 
@@ -17,15 +17,6 @@ def salvar_dados(caminho, dados):
 @app.route('/')
 def index():
     return render_template("paginainicial.html")
-
-@app.route('/redirecionar', methods = ['POST'])
-def redirecionar():
-    caminho = request.json.get('caminho')
-
-    if caminho == 'cliente':
-        redirect(url_for('/cardapio'))
-    elif caminho == 'chefe':
-        redirect(url_for('/cozinha'))
 
 @app.route('/cardapio')
 def cardapio():
@@ -82,6 +73,14 @@ def removerpedido (pedido_id):
 
     return jsonify({"mensagem": "Pedido enviado com sucesso"})
 
+@app.route('/redirecionar', methods = ['POST'])
+def redirecionar():
+    caminho = request.json.get('caminho')
+
+    if caminho == 'cliente':
+        return jsonify({"url": url_for('cardapio')})
+    elif caminho == 'cozinha':
+        return jsonify({"url": url_for('cozinha')})
 
 if __name__ == "__main__":
     app.run(debug=True)

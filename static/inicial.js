@@ -6,23 +6,26 @@ document.getElementById('cliente').addEventListener('click', function(){
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ cliente: caminho }),
+        body: JSON.stringify({ caminho: caminho }),
     })
-    .then(() => {
-        console.log('Resposta enviada')
+    .then(response => response.json())
+    .then(data => {
+        window.location.href = data.url
 })
-})
-document.getElementById('chefe').addEventListener('click', function(){
-    const caminho = 'chefe'
+});
+
+document.getElementById('cozinha').addEventListener('click', function(){
+    const caminho = 'cozinha'
 
     fetch('/redirecionar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ cliente: caminho }),
+        body: JSON.stringify({ caminho: caminho }),
     })
-    .then(() => {
-        console.log('Resposta enviada')
+    .then(response => response.json())
+    .then(data => {
+        window.location.href = data.url
 })
 })
