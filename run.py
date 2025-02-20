@@ -48,7 +48,7 @@ def enviar_pedido():
         for pedido in pedidos:
             if pedido['id'] > maior:
                 maior = pedido['id']
-    else: maior = 1
+    else: maior = 0
 
     novo_pedido = {
         "id": maior + 1,

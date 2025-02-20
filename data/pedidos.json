@@ -1,1 +1,58 @@
-[]
+[
+    {
+        "id": 2,
+        "mesa": "1",
+        "pedido": [
+            {
+                "item": "Quatro Queijos",
+                "quantidade": 4,
+                "preco": 35.9
+            }
+        ],
+        "preco": 143.6
+    },
+    {
+        "id": 3,
+        "mesa": "2",
+        "pedido": [
+            {
+                "item": "Vegetariana",
+                "quantidade": 3,
+                "preco": 35.9
+            },
+            {
+                "item": "Bacon",
+                "quantidade": 2,
+                "preco": 35.9
+            },
+            {
+                "item": "Pepperoni",
+                "quantidade": 1,
+                "preco": 35.9
+            },
+            {
+                "item": "Quatro Queijos",
+                "quantidade": 1,
+                "preco": 35.9
+            }
+        ],
+        "preco": 251.3
+    },
+    {
+        "id": 4,
+        "mesa": "6",
+        "pedido": [
+            {
+                "item": "Calabresa",
+                "quantidade": 2,
+                "preco": 35.9
+            },
+            {
+                "item": "Coca-Cola",
+                "quantidade": 2,
+                "preco": 5.9
+            }
+        ],
+        "preco": 83.6
+    }
+]
