@@ -6,17 +6,26 @@ app = Flask(__name__)
 
 def carregar_dados(caminho):
     if os.path.exists(caminho):
-        with open(caminho, "r") as file:
+        with open(caminho, "r", encoding='utf-8') as file:
             return json.load(file)
     return []
 
 def salvar_dados(caminho, dados):
-    with open(caminho, "w") as file:
+    with open(caminho, "w", encoding='utf-8') as file:
         json.dump(dados, file, indent=4)
         
 @app.route('/')
-def index():                    
+def index():
     return render_template("paginainicial.html")
+
+@app.route('/redirecionar', methods = ['POST'])
+def redirecionar():
+    caminho = request.json.get('caminho')
+
+    if caminho == 'cliente':
+        redirect(url_for('/cardapio'))
+    elif caminho == 'chefe':
+        redirect(url_for('/cozinha'))
 
 @app.route('/cardapio')
 def cardapio():
