@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 header{
     background-color: rgb(49, 47, 47);
     color: white;
@@ -88,43 +95,151 @@ main h1 {
     box-shadow: 0 0 0 2px rgba(129, 20, 20, 0.5); 
 }
 
-.pedidos {
-    background-color: #f8f8f8;
-    border-radius: 10px;
-    margin: 10px 0;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    color: black;
-    font-size: 25px;
-    display: flex;
-    gap: 60%;
-    width: 500px;
-    margin-left: 100px;
-}
 
-.pedidos2 {
-    background-color: #f8f8f8;
-    border-radius: 10px;
-    margin: 10px 0;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    color: black;
-    font-size: 25px;
+.pedido{
+    background-color: white;
     display: flex;
     flex-direction: column;
-    gap: 60%;
-    width: 500px;
-    margin-left: 100px;
-   
+    gap: 10px;
+    border-radius: 15px;
 }
 
-.pago {
-    border: none; 
-    background: none; 
-    background-color: rgb(28, 30, 28); 
-    color: white; 
-    padding: 10px 20px; 
-    font-size: 16px;  
-    border-radius: 5px; 
+.pedidos-pendentes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 700px;
+    
+}
+
+.pedidos-pendentes h2{
     text-align: center;
+    margin-top: 10px;
+}   
+
+.text{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.botoes{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.aceitar{
+    background-color: rgb(29, 129, 20);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.aceitar:hover{
+    background-color: rgb(15, 100, 19);
+}
+
+.aceitar:active{
+    background-color: rgb(21, 80, 10);
+}
+
+.recusar{
+    background-color: rgb(129, 20, 20);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.recusar:hover{
+    background-color: rgb(100, 15, 15);
+}
+
+.recusar:active{
+    background-color: rgb(80, 10, 10);
+}
+
+
+.pedidos-aceitos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 700px;
+}
+
+
+.pedidos-aceitos h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+
+.pedidos-aceitos .pedido {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.pedidos-aceitos .pedido .text {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 16px;
+    color: #000000;
+}
+
+
+.pedidos-aceitos .pedido .btn-pago {
+    background-color: rgb(84, 84, 84); 
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+.pedidos-aceitos .pedido .btn-pago:hover {
+    background-color: rgb(15, 100, 19); 
+}
+
+/* Efeito active no botão "Pago" */
+.pedidos-aceitos .pedido .btn-pago:active {
+    background-color: rgb(21, 80, 10); 
+}
+
+/* Efeito focus no botão "Pago" */
+.pedidos-aceitos .pedido .btn-pago:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(29, 129, 20, 0.5); 
 }

@@ -15,30 +15,36 @@
 
     <main>
         <h1>Pendentes</h1>
+        <!--Seção pedidos pendentes-->
+        <section class="pedidos-pendentes">
+            {% for pedido in pedidos %}
+                <div class="pedido" data-id="{{ loop.index0 }}">
+                    <h2>Mesa: {{ pedido.mesa }}</h2>
+                    <ul>
+                        {% for item in pedido.pedido %}
+                            <li class="text">
+                                {{ item.quantidade }}x {{ item.item }} - R$ {{ "%.2f"|format(item.preco * item.quantidade) }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <p class="text"><strong>Total: R$ {{ pedido.preco }}</strong></p>
+                    <div class="botoes">
+                        <button class="aceitar">Aceitar</button>
+                        <button class="recusar">Recusar</button>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
 
-        <div class="pedidos">
-            <p>pedidos</p>
-            <div class="botão">
-                <div class="conf"><button>Confirmar</button></div>
-                <div class="rec"><button>Recusar</button></div>
-            </div>
-        </div>
+        <h1>Pedidos Aceitos</h1>
+        <!--Seção pedidos aceitos-->
+        <section class="pedidos-aceitos">
+            
+            
+        </section>
 
-        <h1>Esqueci o outro nome</h1>
-
-        <div class="pedidos2">
-            <p></p>
-            <p>pedidos</p>
-            <div class="pago"><button>pedido pago</button></div>
-        </div>
+        
     </main>
-
-    <ul>
-        {% for pedido in pedidos %}
-            <li>{{ pedido }}</li>
-        {% endfor %}
-    </ul>
-
-
+    <script src="../static/cozinha.js"></script>
 </body>
 </html>
