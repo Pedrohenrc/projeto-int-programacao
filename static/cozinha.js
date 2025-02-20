@@ -23,7 +23,6 @@ function aceitarPedido(pedidoElement) {
 //Recusar o pedido
 function recusarPedido(pedidoElement) {
     const pedido_id = pedidoElement.dataset.id;
-    console.log(`Pedido ${pedido_id} recusado e removido.`);
 
     fetch(`/remover_pedido/${pedido_id}`, {
         method: 'DELETE',
@@ -32,8 +31,7 @@ function recusarPedido(pedidoElement) {
         },
     })
     .then(response => response.json())
-    .then(data => {
-        console.log('Pedido removido com sucesso:', data);
+    .then(() => {
         pedidoElement.remove(); 
     })
 }
@@ -42,7 +40,7 @@ document.querySelectorAll('.recusar').forEach(button => {
     button.addEventListener('click', function() {
         const pedidoElement = this.closest('.pedido');
         recusarPedido(pedidoElement);
-    });
+    });
 });
 
 //Adiciona os eventos de aceitar e recusar pedido
