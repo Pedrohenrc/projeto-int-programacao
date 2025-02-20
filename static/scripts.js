@@ -170,6 +170,6 @@ function exibirMensagem() {
 
   setTimeout(() => {
     mensagem.classList.remove('mostrar')
-  }, 2000)
+  }, 1000)
 
 }

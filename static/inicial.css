@@ -9,17 +9,21 @@
 
 
 h1{
-    color: rgb(227, 219, 219);
+    color: rgb(255, 255, 255);
     text-align: center;
-    margin-top: 80px;
+    margin-top: 150px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);;
 }
 
 body {
     background-color: rgb(41, 40, 40);
     align-items: center;
     gap: 60px;
+    background-image: url(imagens/interior-de-madeira-borrada-do-restaurante-em-cores-quentes-com-luz-de-bokeh_76000-522.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
 }
-
 .user {
     background: none;
     border: none;
@@ -28,11 +32,15 @@ body {
     height: 160px;
     border-radius: 90px;
     cursor: pointer;
+    color: #45a049;
+    font-size: 25px;
 }
 
 .user:hover {
     background-color: #45a049; 
     transform: scale(1.05); 
+    transition: 0.5s;
+    color: white;
 }
 
 
@@ -49,11 +57,15 @@ body {
     height: 160px;
     border-radius: 90px;
     cursor: pointer;
+    color: #45a049;
+    font-size: 25px;
 }
 
 .cozinha:hover {
     background-color: #45a049; 
     transform: scale(1.05); 
+    transition: 0.5s;
+    color: white;
 }
 
 
