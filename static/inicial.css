@@ -27,6 +27,18 @@ body {
     width: 300px;
     height: 160px;
     border-radius: 90px;
+    cursor: pointer;
+}
+
+.user:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+}
+
+
+.user:active {
+    background-color: #3e8e41; 
+    transform: scale(0.95); 
 }
 
 .cozinha {
@@ -36,6 +48,18 @@ body {
     width: 300px;
     height: 160px;
     border-radius: 90px;
+    cursor: pointer;
+}
+
+.cozinha:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+}
+
+
+.cozinha:active {
+    background-color: #3e8e41; 
+    transform: scale(0.95); 
 }
 
 a{
